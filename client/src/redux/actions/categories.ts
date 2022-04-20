@@ -4,7 +4,7 @@ import { FORM_SUB } from "../../components/products/categories/create/CreateCate
 
 import { Category, TYPES_CATEGORIES } from "../interface";
 
-const URL = process.env.REACT_APP_API + "/api";
+const URL = "/api";
 
 export function getCategories() {
   return async function (dispatch: Dispatch) {

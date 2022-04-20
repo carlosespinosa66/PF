@@ -1,6 +1,9 @@
 const { Order, User, Order_detail, Product } = require('../db');
 const { sendMailOrder, sendMailState } = require('./mailer');
 require('dotenv').config();
+
+
+
 const {
   ORDER_STATUS_PENDING,
   ORDER_STATUS_BILLED,
@@ -641,7 +644,7 @@ const updateStockproducts = async (productId, quantity) => {
   });
 
   if (productupdate.stock < quantity) {
-    await productupdate.update({ stock: 0});
+    await productupdate.update({ stock: 0, isActive: false });
   } else {
     await productupdate.update({ stock: productupdate.stock - quantity });
   }

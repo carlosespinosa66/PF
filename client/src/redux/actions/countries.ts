@@ -2,7 +2,7 @@ import axios from "axios";
 import { Dispatch } from "redux";
 import { TYPES_ADMIN, TYPES_COUNTRIES } from "../interface";
 
-const URL = process.env.REACT_APP_API + "/api";
+const URL = "/api";
 
 export function getCountries() {
     try {
