@@ -4,9 +4,10 @@ import { Dispatch } from "redux";
 
 import { AXIOSDATA, Product, TYPES_PRODUCT } from "../interface";
 // import interfaces from '....'
-const URL = "http://localhost:3001/api";
+const URL = process.env.REACT_APP_API +"/api";
 
-const URL_WISH = "http://localhost:3001/api/wishList";
+
+const URL_WISH = process.env.REACT_APP_API +"/api/wishList";
 
 const defaultCallback = (error: any) => {
   if (error) {
