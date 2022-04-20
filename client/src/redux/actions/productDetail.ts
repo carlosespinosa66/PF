@@ -3,8 +3,8 @@ import { Dispatch } from "redux";
 import { TYPES_DETAIL } from "../interface";
 import swal from "sweetalert";
 
-const URL = "http://localhost:3001/api/products/";
-const URL_BLOCKS = "http://localhost:3001/api/";
+const URL = process.env.REACT_APP_API + "/api/products/";
+const URL_BLOCKS = process.env.REACT_APP_API + "/api/";
 
 export const getProductDetail = (id: string | undefined) => {
   return async (dispatch: Dispatch) => {

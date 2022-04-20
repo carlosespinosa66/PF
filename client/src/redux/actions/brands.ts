@@ -3,7 +3,7 @@ import { Dispatch } from "redux";
 
 import { TYPES_BRANDS } from "../interface";
 
-const URL = "http://localhost:3001/api/brands";
+const URL = process.env.REACT_APP_API + "/api/brands";
 
 export function getBrands() {
   return async function(dispatch: Dispatch) {

@@ -5,10 +5,10 @@ import { RESET_PASSWORD } from "../../components/users/ResetForgotPasswords";
 import { PWD } from "../../components/users/ResetPwd";
 import { TYPES_USER, User } from "../interface";
 import swal from "sweetalert";
-const URL_USER = "http://localhost:3001/api";
-const URLRESET = "http://localhost:3001/api/forgotPasswordReset";
-const URLRESET2 = "http://localhost:3001/api/submitPasswordReset";
-const URLVALIDATE = "http://localhost:3001/api/activateAccount/";
+const URL_USER = process.env.REACT_APP_API + "/api";
+const URLRESET = process.env.REACT_APP_API + "/api/forgotPasswordReset";
+const URLRESET2 = process.env.REACT_APP_API + "/api/submitPasswordReset";
+const URLVALIDATE = process.env.REACT_APP_API + "/api/activateAccount/";
 
 const USER_STORAGE = "USER_LOGGED";
 

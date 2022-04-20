@@ -24,7 +24,7 @@ export const clearCart = () => {
 };
 
 
-const URL_ORDER = "http://localhost:3001/api/auth/orders";
+const URL_ORDER = process.env.REACT_APP_API + "/api/auth/orders";
 
 export const getPendingOrder = (token: string) => {
   try {   
