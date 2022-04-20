@@ -4,7 +4,7 @@ import { Dispatch } from "redux";
 
 import { AXIOSDATA, Product, TYPES_PRODUCT } from "../interface";
 // import interfaces from '....'
-const URL = process.env.REACT_APP_API +"/api";
+const URL = "/api";
 
 
 const URL_WISH = process.env.REACT_APP_API +"/api/wishList";
