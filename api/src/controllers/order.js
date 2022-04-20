@@ -641,7 +641,7 @@ const updateStockproducts = async (productId, quantity) => {
   });
 
   if (productupdate.stock < quantity) {
-    await productupdate.update({ stock: 0, isActive: false });
+    await productupdate.update({ stock: 0});
   } else {
     await productupdate.update({ stock: productupdate.stock - quantity });
   }
